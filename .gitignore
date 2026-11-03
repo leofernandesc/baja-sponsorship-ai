@@ -42,3 +42,22 @@ assets/templates/private/
 # Restricted artwork and source reference material
 assets/reference/private/
 *.pptx.tmp
+
+# E1 security: real BAJA institution/proposal assets must never reach public Git
+/data/private/
+/knowledge/private/
+/assets/raw/
+/research/private/
+/partners/private/
+/contracts/
+/restricted/
+*.pptx
+*.pptm
+*.pdf
+*.xlsx
+*.xls
+*.csv
+*.ods
+*.eml
+*.vcf
+*.log

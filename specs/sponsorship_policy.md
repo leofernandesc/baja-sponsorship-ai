@@ -1,33 +1,55 @@
-# Sponsorship policy — hybrid model
+# Sponsorship policy — hybrid model (E1)
 
-**Status:** Hybrid model APPROVED. Tier values, intervals, benefits, owners and commitments PENDING current BAJA UEA confirmation.
+**Policy status:** Sponsorship taxonomy and approval roles **APPROVED 2026-11-03**. Official tier labels and existing plan benefits are retained. Detailed tier boundaries, specific amounts and benefit entitlements are awaiting validated private records.
 
-## Modes
+## Separate dimensions: contribution versus commercial arrangement
 
-- `official_tier`: tier ID from a human-maintained and approved tier table; exact price and benefits cannot be invented or adjusted by the model.
-- `financial_custom`: negotiated financial support outside standard tier; requires manual approval of amount and associated benefits.
-- `in_kind`: components, materials, tools, logistics or services suggested based on current verified needs; quantity and compatibility require technical review.
-- `technical`: mentorship, workshop, engineering or validation support; proposed, not presumed available.
-- `institutional`: joint presence/events, relationships and recognition; subject to brand and event approvals.
-- `mixed`: combination of the above with approval for each non-standard commitment.
+**Contribution type** (`support_type`, one per contribution):
+1. `money` — financial support.
+2. `materials` — donated/supplied parts, tools, consumables, materials or equipment.
+3. `services` — logistics, manufacturing, maintenance, training or other services.
 
-## Business constraints
+**Commercial arrangement** (`arrangement`):
+- `official_tier`: current approved tier plan (Diamante, Ouro, Prata, Bronze, Apoio);
+- `custom`: specifically negotiated terms or deliverables, subject to operational-management approval;
+- `mixed`: two or more contribution types and/or official-tier plus individually approved custom terms.
 
-1. The model proposes; the team approves.
-2. No fabricated price, return-on-investment figure, media reach forecast, product compatibility or exclusivity.
-3. A suggestion to provide hardware must refer to an approved need and cannot infer product donations from a company catalog.
-4. Sponsor logos, vehicle branding, test-drive, factory visits or speaker access are not automatically granted. Use only approved benefits and availability.
-5. National event sponsorship does not imply direct existing team sponsorship.
-6. An optional sponsorship value recommendation must be a **draft requiring explicit approval**, not an automatic quotation.
-7. Do not assert tax deductibility, fiscal incentives or legal eligibility without case-specific review.
+A technical or institutional opportunity is a partnership theme, **not an additional primary support type**. The same proposal can contain multiple contribution line items with distinct types.
 
-## Required reviewed datasets
+## Commercial governance
 
-- `tiers`: unique ID, label, value range, currency, valid_from/to, valid benefits, approval authority.
-- `benefits`: deliverable description, conditions, visibility class, owner, availability.
-- `needs`: team subsystem, requested items/services, urgency, restrictions, owner and update date.
-- `exceptions`: scope/approver/expires_at for negotiated special arrangements.
+- **Institutional data owner, commercial approver, final reviewer:** BAJA UEA operational management.
+- The model **may suggest** monetary amounts or custom commercial packages, but cannot issue final offers or guarantee benefits without management approval.
+- Existing plan benefits are the sole initial authorized benefit catalog; additional benefits must be explicitly requested and approved.
+- Materials and services are classified **separately**, not automatically converted to money or tier status. Where equivalence or cost valuation is relevant, it requires a documented management decision.
+- Provisional technical needs extracted from the PPTX are discovery aids, not validated procurement requirements. Do not promise availability, product compatibility, quantities or prices.
+- The legacy annual budget is excluded from scoring, calculations, proposed monetary amounts and institutional narrative, regardless of its presence in the visual template.
+- Use historical 2025/2026 achievements only with their period label within 2026/2027 proposals.
+- No fabricated reach/ROI, contracts, exclusivity, legal eligibility, tax deductions or third-party commitments.
+- National Baja SAE sponsorship does not constitute direct BAJA UEA sponsorship.
+- Logos, test drives, presentation appearances and factory visits require approved entitlement and any necessary permissions.
 
-## Acceptance condition
+## Approved decision: monetary amounts outside official bands
 
-Tier ranges and values must be internally consistent, have no unintended gaps/overlaps, and match the current approved commercial policy before any automated tier recommendation is enabled.
+Official tier bands are not expanded to include a cash amount. A draft in an uncovered band is treated as a custom proposal pending explicit operational-management approval. Custom proposals do **not** automatically inherit tier-related visibility or other benefits. Ambiguous or overlapping bands must be clarified in the data source before automatic official-tier matching.
+
+## Required private reviewed datasets
+
+- `tiers`: `tier_id`, `label`, `currency`, `min_amount?`, `max_amount?`, inclusivity, `effective_cycle`, `benefit_ids`, `approved_by_role`, `approved_at`.
+- `benefits`: `benefit_id`, description, allowed tiers, conditions, asset permissions, delivery owner, valid period.
+- `needs`: `need_id`, subsystem, support type, item/service, technical constraints, quantity if approved, `provisional|approved|expired`, update date.
+- `support_lines`: `support_type`, proposed commitment, monetary amount if applicable, linked needs and benefits, review state.
+- `exceptions`: scope, negotiated proposal ID, authorized benefit/amount, authorizing management role, expiry.
+
+## Commercial gates
+
+1. Keep official tier ranges unchanged. If a cash amount is in a verified, uncovered interval, create a **custom monetary draft** with `classification_reason=uncovered_official_range` and `approval_required=true`, without assigning official tier benefits. If range data are unverified, overlapping, or endpoint-inclusive rules ambiguous, mark the match unresolved and route to management review. Only a unique match to a confirmed band may suggest an official tier.
+2. Do not set final approval unless all applicable amounts, terms, benefits, brand uses and technical needs are approved.
+3. Draft suggestions may omit amounts until a valid official price table exists.
+4. Never auto-send, submit or publish a proposal to companies in MVP v1.
+
+## Publication policy
+
+Store private commercial catalogs, contacts, proprietary presentations and draft proposals only in controlled non-public storage. The public repository contains rules, schemas and sanitized synthetic tests. See `docs/PRIVACY_AND_DATA_HANDLING.md`.
+
+**Reference:** `docs/E1_DECISIONS.md`.

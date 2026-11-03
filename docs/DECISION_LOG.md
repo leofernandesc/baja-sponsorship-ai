@@ -25,3 +25,24 @@ Decision states: `APPROVED` (explicitly selected), `PROPOSED` (working assumptio
 ## Update protocol
 
 New decisions use an ID, justification, alternatives, impacts, approver and date. Update specifications and tests for material changes. Do not silently promote PROPOSED/OPEN to APPROVED.
+
+## E1 accepted decisions — 2026-11-03
+
+| ID | State | Decision / rationale |
+|---|---|---|
+| D-018 | APPROVED | Sponsorship cycle is 2026/2027; 2025/2026 metrics remain historically labeled, confirmed for use. |
+| D-019 | APPROVED | Institutional data steward, custom proposal approver and final proposal reviewer are the **operational management** role. |
+| D-020 | APPROVED | Money, materials and services are the three primary support types. Mixed sponsorship may combine them. |
+| D-021 | APPROVED | Official Diamante/Ouro/Prata/Bronze/Apoio tiers remain; AI may propose financial amounts subject to approval. |
+| D-022 | APPROVED | Materials/services receive their own classifications; do not auto-convert either to financial tiers. |
+| D-023 | APPROVED | Initial technical needs derive only provisionally from uploaded PPTX, until validated current inventory arrives. |
+| D-024 | APPROVED | Exclude legacy annual budget from knowledge, reasoning, arithmetic and recommendations. |
+| D-025 | APPROVED | Existing tier-plan benefits are the only baseline; additional and tailored benefits require explicit approval. |
+| D-026 | APPROVED | Current contact records confirmed by the team, but must remain in private runtime storage, not public GitHub. |
+| D-027 | APPROVED | No sensitive data may be publicly accessible through repository, branches, PRs, issues or artifacts. |
+| D-028 | PARTIALLY_RESOLVED | **APPROVED gap rule:** preserve official tier ranges; a verified uncovered amount becomes a `custom` financial proposal requiring operational-management approval, with no automatic tier benefits. Overlapping/uncertain boundaries and source-table transcription remain OPEN before automatic official-tier matching. |
+| D-029 | OPEN | Technical-needs validation, private data store and publication rights for logos/documents. |
+
+| D-030 | APPROVED | Never alter tier brackets to fill uncovered amounts; classify unmatched verified amounts as custom monetary drafts, subject to management approval. |
+
+Previous decisions D-011/D-012 are refined by these decisions: owner role and confidentiality are now established, while detailed commercial tables and asset permission remain open. See `docs/E1_DECISIONS.md`.

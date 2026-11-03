@@ -1,6 +1,6 @@
 # Development plan and checkpoints
 
-**Status:** E0 structural inventory and initial save/append spike completed on 03 Nov 2026; **E0 gate remains OPEN** for font/OLE/visual/commercial approvals. No dates assigned; phase gates depend on evidence, not calendar promises.
+**Status:** E0 structurally feasible and accepted as a planning basis; residual PowerPoint fidelity/embedded-object checks remain gated in E4. E1 business policy confirmed on 2026-11-03; E1 data approval remains in progress. No dates assigned; phase gates depend on evidence.
 
 ## E0 — Repository and PowerPoint feasibility
 
@@ -20,15 +20,22 @@
 
 ## E1 — Institutional knowledge and sponsorship rules
 
-**Deliverables:** versioned, approved BAJA data (identity, results, technical needs, goals, approved offers and contact); finalized hybrid-policy inputs.
+**Deliverables:** 2026/2027 sponsorship policy, source-versioned approved facts, validated tier/benefit catalog, provisional/current technical-needs catalog and private data-handling policy. See `docs/E1_DECISIONS.md`.
 
 **Tasks:**
-- [ ] Distinguish historical achievements (e.g., 2025/2026) from current metrics.
-- [ ] Validate funding tiers, benefits, gaps, exceptions and approval authorities.
-- [ ] Define policies for in-kind support, technical cooperation and financial sponsorship.
-- [ ] Create change process and expiry/review periods for institutional facts.
+- [x] Confirm 2026/2027 cycle, while labeling 2025/2026 achievements as historical.
+- [x] Approve operational management as institutional, commercial, and final-output authority.
+- [x] Confirm official tier names and the hybrid arrangement model; AI may propose financial amounts for approval.
+- [x] Confirm three primary support types: money, materials, services; preserve their distinctions in any mixed deal.
+- [x] Set existing plan benefits as baseline, with manually approved custom additions.
+- [x] Exclude legacy annual budget from recommendations and public project datasets.
+- [x] Establish public-repository prohibition for sensitive information; publish schema/docs only.
+- [ ] Transcribe and validate current tier boundaries/benefits from embedded 2026 table; resolve gaps.
+- [ ] Seed provisional needs from the PPTX and obtain technical confirmation before actual requests.
+- [ ] Create controlled private store, protected contact dataset, and update/review workflow.
+- [ ] Complete authorization checks for logos and third-party artwork.
 
-**Gate E1:** Every published institutional statement and benefit has a source, effective scope and owner approval; no ambiguous financial tier bands.
+**Gate E1:** Commercial taxonomy approved (done); source and private data are not yet fully approved. No live tier classification from ambiguous amount bands, no real requests based on provisional needs, and no public sensitive data.
 
 ## E2 — Research and evidence
 

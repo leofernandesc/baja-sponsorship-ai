@@ -1,6 +1,6 @@
 # E0 — PowerPoint source audit (03 Nov 2026)
 
-**Status:** Structural inventory and basic save/append feasibility checks completed. **E0 NOT YET APPROVED:** fonts/layout fidelity in official PowerPoint, OLE object behavior, authorized commercial content and slide insertion rules need validation.
+**Status:** Structural inventory and basic save/append feasibility checks completed. **E0 structurally feasible for planning:** source/editability check complete. Font/OLE fidelity still requires E4 acceptance. Business rules moved to E1; the original budget must not feed any calculation or recommendation.
 
 ## Files evaluated (not committed to the public repository)
 
@@ -25,7 +25,7 @@ The company-specific deck is **the designated baseline for generated PowerPoint 
 | 7 | História (2) | Institutional |
 | 8 | Resultados 25/26 | Historical facts, cycle-fixed; require update only at new cycle |
 | 9 | Áreas técnicas e operacionais | Institutional |
-| 10 | Orçamento anual | Needs finance-owner validation |
+| 10 | Orçamento anual | Excluded from AI data/recommendations by E1 approval; output display to be decided in E4 |
 | 11 | Patrocínio & apoio | Institutional |
 | 12 | Cotas e contrapartidas | OLE/Excel object: review/fix before automation |
 | 13 | Proposta e justificativa de patrocínio | COMPANY-SPECIFIC 2026 example; never reuse numeric terms by default |
