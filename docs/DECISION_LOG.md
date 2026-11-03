@@ -40,7 +40,9 @@ New decisions use an ID, justification, alternatives, impacts, approver and date
 | D-025 | APPROVED | Existing tier-plan benefits are the only baseline; additional and tailored benefits require explicit approval. |
 | D-026 | APPROVED | Current contact records confirmed by the team, but must remain in private runtime storage, not public GitHub. |
 | D-027 | APPROVED | No sensitive data may be publicly accessible through repository, branches, PRs, issues or artifacts. |
-| D-028 | OPEN | Resolve numeric range gaps and benefit transcription of the OLE table before auto tier matching. |
+| D-028 | PARTIALLY_RESOLVED | **APPROVED gap rule:** preserve official tier ranges; a verified uncovered amount becomes a `custom` financial proposal requiring operational-management approval, with no automatic tier benefits. Overlapping/uncertain boundaries and source-table transcription remain OPEN before automatic official-tier matching. |
 | D-029 | OPEN | Technical-needs validation, private data store and publication rights for logos/documents. |
+
+| D-030 | APPROVED | Never alter tier brackets to fill uncovered amounts; classify unmatched verified amounts as custom monetary drafts, subject to management approval. |
 
 Previous decisions D-011/D-012 are refined by these decisions: owner role and confidentiality are now established, while detailed commercial tables and asset permission remain open. See `docs/E1_DECISIONS.md`.

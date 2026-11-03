@@ -18,7 +18,7 @@ Approved prior-cycle facts must not be relabeled as 2026/2027 achievements.
 
 `SponsorshipProposal`: `arrangement: official_tier|custom|mixed`, `contributions[]`, `tier_id?`, `benefit_ids[]`, `requested_exceptions[]`, `approval_state`, `approved_by_role`, `approved_at?`.
 
-**Invariant:** no implicit valuation equivalence between materials/services and monetary tier; no live tier allocation where amount bands are unresolved.
+**Invariant:** no implicit valuation equivalence between materials/services and monetary tier. A cash amount outside all verified official bands is a `custom` monetary draft (`classification_reason=uncovered_official_range`, `approval_state=review_required`), without tier benefits. Overlapping/unverified ranges cannot drive automatic official-tier matching; the actual bands must be transcribed and checked before use.
 
 ## Technical needs
 

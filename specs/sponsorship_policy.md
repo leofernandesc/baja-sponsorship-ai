@@ -29,6 +29,10 @@ A technical or institutional opportunity is a partnership theme, **not an additi
 - National Baja SAE sponsorship does not constitute direct BAJA UEA sponsorship.
 - Logos, test drives, presentation appearances and factory visits require approved entitlement and any necessary permissions.
 
+## Approved decision: monetary amounts outside official bands
+
+Official tier bands are not expanded to include a cash amount. A draft in an uncovered band is treated as a custom proposal pending explicit operational-management approval. Custom proposals do **not** automatically inherit tier-related visibility or other benefits. Ambiguous or overlapping bands must be clarified in the data source before automatic official-tier matching.
+
 ## Required private reviewed datasets
 
 - `tiers`: `tier_id`, `label`, `currency`, `min_amount?`, `max_amount?`, inclusivity, `effective_cycle`, `benefit_ids`, `approved_by_role`, `approved_at`.
@@ -39,7 +43,7 @@ A technical or institutional opportunity is a partnership theme, **not an additi
 
 ## Commercial gates
 
-1. Do not auto-match a value to any tier if the tier ranges have gaps, overlaps or inclusive-end ambiguity. Route to management review.
+1. Keep official tier ranges unchanged. If a cash amount is in a verified, uncovered interval, create a **custom monetary draft** with `classification_reason=uncovered_official_range` and `approval_required=true`, without assigning official tier benefits. If range data are unverified, overlapping, or endpoint-inclusive rules ambiguous, mark the match unresolved and route to management review. Only a unique match to a confirmed band may suggest an official tier.
 2. Do not set final approval unless all applicable amounts, terms, benefits, brand uses and technical needs are approved.
 3. Draft suggestions may omit amounts until a valid official price table exists.
 4. Never auto-send, submit or publish a proposal to companies in MVP v1.

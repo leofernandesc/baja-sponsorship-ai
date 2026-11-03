@@ -3,7 +3,7 @@
 **Decision date:** 2026-11-03  
 **Approving role:** BAJA UEA operational management  
 **Scope:** 2026/2027 sponsorship cycle  
-**Status:** Business rules approved; structured source data and price-band validation still in progress.
+**Status:** Business rules approved, including gap handling; structured source data and tier-table transcription/validation remain in progress.
 
 ## Explicitly approved inputs (answers 1–14)
 
@@ -34,6 +34,14 @@
 
 Do **not** automatically convert materials/services into a cash tier. If accounting valuation or equivalent tier recognition is later required, operational management must approve the method and assessment for each case.
 
+## Approved handling for gaps in official tier ranges
+
+- No automatic widening, narrowing, or normalization of official ranges.
+- If a proposed cash amount matches **exactly one confirmed official tier**, it may be suggested under that tier (benefits still require review and validated catalog).
+- If a proposed amount lies **between confirmed tier ranges**, assign it to a *custom monetary proposal draft* with a recorded reason (`uncovered_official_range`) and management approval requirement.
+- If tier data or an interval endpoint is **unclear or overlapping**, report `ambiguous_tier_match` and require review rather than asserting an official tier.
+- Never automatically inherit benefits from the nearest tier for a custom amount; only explicit, approved benefits may be proposed.
+
 ## Source and display policy
 
 - The supplied 2026 sponsorship PowerPoint is the visual/document source. The company-specific slide is never reused verbatim.
@@ -45,7 +53,7 @@ Do **not** automatically convert materials/services into a cash tier. If account
 
 ## Open E1 data gates
 
-1. **Tier boundaries:** the legacy table has apparent pricing gaps/ambiguous boundaries; names stay valid, but the matching engine cannot auto-classify uncovered amounts until a rule is approved.
+1. **Tier boundaries (rule approved):** preserve the official bands exactly as supplied; a value falling in an uncovered interval is proposed as a **custom monetary sponsorship** (`arrangement=custom`, `review_required`), never silently assigned to an adjacent tier. Ambiguous overlapping or unclear boundaries remain blocked for automatic tier classification until verified. Transcription/verification of the underlying bands is still pending.
 2. **Benefits:** the source PPTX is the only initial benefits catalog. Transcribe and cross-check the embedded table, including conditional benefits and visibility levels; no additions are auto-approved.
 3. **Technical needs:** extract candidate categories from the PPTX, label `provisional_source_only`, and obtain technical team approval before requesting specific models, quantities or prices.
 4. **Private source of truth:** decide controlled private data storage and revision/backup workflow. Public repo must contain schema/examples only, never personal data or commercial exhibits.
