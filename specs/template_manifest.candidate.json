@@ -1,0 +1,130 @@
+{
+  "status": "CANDIDATE_NOT_APPROVED",
+  "base_role": "sponsorship_pptx_2026_company_example",
+  "baseline": {
+    "expected_slides": 15,
+    "slide_width_inches": 20.0,
+    "slide_height_inches": 11.25,
+    "sha256": "527caecd04f8e917da2e18d3a51c944995698774df694e47edc853014337aa8f",
+    "local_file_policy": "restricted/do-not-commit"
+  },
+  "companion_sources": [
+    {
+      "role": "institutional_portfolio",
+      "expected_slides": 16,
+      "orientation": "portrait",
+      "sha256": "93174462edd7620f277605756a6c25a1622cbd656878132c32fb8a5d57fd581e"
+    },
+    {
+      "role": "historical_reference",
+      "year": 2025,
+      "type": "pdf",
+      "page_count": 20
+    }
+  ],
+  "design": {
+    "family": "black-yellow-white",
+    "fonts_observed": [
+      "Poppins",
+      "Poppins Bold",
+      "Poppins Ultra-Bold",
+      "Anton",
+      "Arimo Bold"
+    ],
+    "fonts_in_validation_environment": "missing",
+    "need_powerpoint_visual_approval": true
+  },
+  "slide_roles": [
+    {
+      "source_slide": 1,
+      "role": "Capa / ciclo 2026",
+      "treatment": "PRESERVE"
+    },
+    {
+      "source_slide": 2,
+      "role": "Sobre nós",
+      "treatment": "PRESERVE"
+    },
+    {
+      "source_slide": 3,
+      "role": "Objetivos e missão",
+      "treatment": "PRESERVE"
+    },
+    {
+      "source_slide": 4,
+      "role": "Veículo BAJA",
+      "treatment": "PRESERVE"
+    },
+    {
+      "source_slide": 5,
+      "role": "Competição Baja SAE",
+      "treatment": "PRESERVE"
+    },
+    {
+      "source_slide": 6,
+      "role": "História (1)",
+      "treatment": "PRESERVE"
+    },
+    {
+      "source_slide": 7,
+      "role": "História (2)",
+      "treatment": "PRESERVE"
+    },
+    {
+      "source_slide": 8,
+      "role": "Resultados 25/26",
+      "treatment": "PRESERVE"
+    },
+    {
+      "source_slide": 9,
+      "role": "Áreas técnicas e operacionais",
+      "treatment": "PRESERVE"
+    },
+    {
+      "source_slide": 10,
+      "role": "Orçamento anual",
+      "treatment": "VALIDATE_CURRENT_DATA"
+    },
+    {
+      "source_slide": 11,
+      "role": "Patrocínio & apoio",
+      "treatment": "PRESERVE"
+    },
+    {
+      "source_slide": 12,
+      "role": "Cotas e contrapartidas",
+      "treatment": "VALIDATE_CURRENT_DATA"
+    },
+    {
+      "source_slide": 13,
+      "role": "Proposta e justificativa de patrocínio",
+      "treatment": "PARAMETERIZE_WITH_APPROVAL"
+    },
+    {
+      "source_slide": 14,
+      "role": "Contatos",
+      "treatment": "VALIDATE_CURRENT_DATA"
+    },
+    {
+      "source_slide": 15,
+      "role": "Patrocinadores",
+      "treatment": "VALIDATE_CURRENT_DATA"
+    }
+  ],
+  "candidate_company_section": {
+    "insert_after_source_slide": 12,
+    "new_slide_count": "1-2 pending design review",
+    "dynamic_sections": [
+      "strategic_fit",
+      "collaboration_opportunities"
+    ],
+    "slide_13_mode": "parameterized commercial offer; nonnumeric fallback until approved",
+    "all_new_text_editable": true
+  },
+  "known_risks": [
+    "embedded OLE/Excel table on slide 12",
+    "required fonts not installed in automated validation",
+    "manual review of logos/contact/prices"
+  ],
+  "acceptance": "block finalization until E0 review and official commercial approval"
+}

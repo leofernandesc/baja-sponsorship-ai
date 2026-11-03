@@ -1,0 +1,44 @@
+# Python and tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+client_secret*.json
+
+# Generated outputs, caches and internal research
+outputs/
+reports/private/
+private/
+cache/
+.tmp/
+*.sqlite
+*.sqlite3
+*.db
+
+# Restricted source templates; track only those approved for distribution
+assets/templates/private/
+
+# Editor and platform
+.DS_Store
+.idea/
+.vscode/
+
+# Restricted artwork and source reference material
+assets/reference/private/
+*.pptx.tmp
