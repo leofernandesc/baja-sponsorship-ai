@@ -2,7 +2,7 @@
 
 AI-assisted sponsorship prospecting and personalized PowerPoint proposal generation for the BAJA UEA engineering team.
 
-**Status:** Planning / E0 feasibility audit (2026-11-03). The editable PPTX files have been inspected; the generation engine is not implemented.
+**Status:** E1 — business rules approved 2026-11-03; commercial catalog and private master data remain to be verified. E0 PPTX structural feasibility checked; full visual fidelity is an E4 acceptance gate. Application is not implemented.
 
 ## Product goal
 
@@ -14,7 +14,7 @@ The editable 2026 sponsorship deck (15 slides) is authoritative for presentation
 
 1. Identify company (resolve ambiguous names only when needed).
 2. Research primary/official sources and collect traceable evidence.
-3. Assess strategic fit and possible financial, in-kind, technical and institutional support.
+3. Assess strategic fit across **money, materials and services**, using official-tier, custom or mixed arrangements.
 4. Draft company-specific arguments within approved sponsorship rules.
 5. Validate factual claims, commercial constraints and presentation compatibility.
 6. Review and approve before creating a final editable PPTX; PDF export is optional.
@@ -23,7 +23,7 @@ The editable 2026 sponsorship deck (15 slides) is authoritative for presentation
 ## Confirmed product decisions
 
 - **Single required input:** company name.
-- **Commercial policy:** hybrid — official BAJA UEA sponsorship tiers plus tailored partnerships, subject to human approval.
+- **Commercial policy:** hybrid — three primary types (money, materials, services), combined through official-tier, custom or mixed arrangements. Operational management approves proposals.
 - **Document strategy:** extend the **user-supplied source PPTX** instead of designing a replacement deck.
 - **MVP UI:** Streamlit; all domain logic remains framework-independent Python.
 - **Target application architecture:** React + TypeScript frontend and FastAPI backend; migrate based on product needs, not simply aesthetics.
@@ -50,19 +50,22 @@ Python · Streamlit · OpenAI Responses API (`web_search` and structured outputs
 - `docs/QUALITY_AND_EVALUATION.md`: test and evaluation plan.
 - `docs/MIGRATION_PLAN.md`: framework migration path.
 - `docs/DECISION_LOG.md`: accepted, proposed and pending decisions.
+- `docs/E1_DECISIONS.md`: team-approved business decisions and remaining E1 validation gates.
+- `specs/knowledge_contracts.md`: conceptual contracts for institutional, sponsorship and needs datasets.
+- `docs/PRIVACY_AND_DATA_HANDLING.md`: required restricted-data boundary for this public GitHub repository.
 - `docs/GITFLOW.md`: branching and review rules.
 - `docs/CODEX_HANDOFF.md`: instructions for Codex implementation handoff.
 
 ## Before development
 
 1. **Source supplied and structurally inspected.** Complete E0 approvals on fonts/rendering, embedded OLE table and extension layout; the local original must remain out of public GitHub.
-2. Approve or correct the current BAJA UEA institutional data, technical needs, sponsorship tiers, benefits and contacts.
+2. E1 decisions have approved the cycle 2026/2027, institutional metrics (historically labeled), current contacts (kept private), sponsor types, benefits policy and reviewer role. Remaining: resolve tier range gaps, transcribe benefit table, validate current needs, and establish private data storage.
 3. The basic E0 round-trip/append feasibility spike passed, but font/embedded-object correctness is unresolved. Approve a frozen `template_manifest.json` after visual review; `specs/template_manifest.candidate.json` is not normative.
 4. Implement in the milestone order documented in `docs/DEVELOPMENT_PLAN.md`.
 
 ## Security and assets
 
-Do not commit API keys, real contact lists, private partner conversations, generated proposals, or restricted presentation assets. Use `.env` locally. Validate trademark/logo usage and distribution rights before publishing any official deck. Repository visibility and license require an explicit team decision.
+Do not commit API keys, real contact lists, private partner conversations, negotiated amounts, generated proposals, internal budgets, source PPTX/PDF, or restricted presentation assets. Use `.env` locally. Validate trademark/logo usage and distribution rights before publishing any official deck. Repository visibility and license require an explicit team decision.
 
 ## Reference documentation
 

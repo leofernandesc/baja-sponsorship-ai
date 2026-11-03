@@ -18,11 +18,15 @@ These are conceptual typed contracts, not implementation claims. Exact JSON Sche
 
 ## TechnicalNeed
 
-`need_id`, `subsystem`, `description`, `priority`, `quantities?`, `compatible_items?`, `owner`, `approved`, `valid_until?`.
+`need_id`, `subsystem`, `description`, `support_type` (`money | materials | services`), `priority?`, `quantities?`, `technical_constraints?`, `owner_role?`, `review_status` (`provisional_source_only | approved | expired`), `valid_until?`.
+
+## Sponsorship plan, contribution and policy
+
+See `specs/knowledge_contracts.md` for `SponsorTier`, `Benefit`, `Contribution`, and confidential `SponsorshipProposal` types. Money, materials and services are the **only primary support types**; official tier/custom/mixed represent separate commercial arrangement states. No automatic money equivalence for materials/services.
 
 ## PartnershipOpportunity
 
-`opportunity_id`, `mode` (`official_tier | financial_custom | in_kind | technical | institutional | mixed`), `rationale`, `evidence_ids[]`, `need_ids[]`, `benefit_ids[]`, `requested_commitments[]`, `approval_required`, `status` (`proposed | reviewed | approved | rejected`).
+`opportunity_id`, `arrangement` (`official_tier | custom | mixed`), `contribution_types[]` (`money | materials | services`), `rationale`, `evidence_ids[]`, `need_ids[]`, `benefit_ids[]`, `requested_commitments[]`, `approval_required`, `status` (`proposed | reviewed | approved | rejected`).
 
 ## ProposalSection
 
@@ -42,6 +46,9 @@ These are conceptual typed contracts, not implementation claims. Exact JSON Sche
 - Proposal section claims must trace to verified external evidence or approved BAJA facts; proposals must read as proposals.
 - An approved proposal must have no outstanding critical validation issues.
 - Custom commitments and unapproved benefits cannot enter an approved state.
+- Final approval is restricted to operational management, with approved institutional facts bound to their source cycles.
+- Legacy annual-budget numbers are not available to the strategy/recommendation pipeline.
+- Authentic contacts, prices, proposals and templates must remain outside the public repository.
 - A final deck must reference the exact template version and source SHA-256.
 
 ## Initial UI view model

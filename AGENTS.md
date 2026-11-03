@@ -4,15 +4,15 @@
 
 - Read `README.md`, `specs/technical_specification.md`, `docs/DECISION_LOG.md`, `docs/DEVELOPMENT_PLAN.md`, and the relevant specification before proposing changes.
 - `specs/technical_specification.md` is the normative source of truth. Do not silently change approved requirements.
-- Current phase is **planning/architecture**, not implementation. Do not generate application features unless explicitly requested for a named milestone.
+- Current phase is **E1 institutional knowledge/governance planning**, not implementation. Do not generate application features unless explicitly requested for a named milestone.
 - The company name is the only required business input; don't add mandatory form fields to ordinary usage.
 - Use the existing sponsorship PPTX as the base; never replace it with an unrelated slide deck. Source remains immutable.
-- Do not infer original PPTX layout, slide count, editability, or fidelity until the PPTX is supplied and inspected.
-- Hybrid sponsorship means official tiers plus custom arrangements. No fabricated values, benefits, contracts or legal/tax claims.
+- The original 2026 sponsorship PPTX has been inspected (15 slides); full fidelity and embedded-table behavior remain E4 gates.
+- Hybrid sponsorship has exactly three primary contribution types: money, materials and services; official-tier/custom/mixed are separate arrangement types. No fabricated amounts, benefits, contracts or legal/tax claims.
 - Public facts require traceable sources; mark inference and unknown distinctly.
 - No emailing or contacting companies autonomously.
 - Human approval must precede a final proposal. A draft never becomes approved merely because a model returned valid JSON.
-- Do not commit API credentials, private contacts, contracts, output proposals, or potentially restricted visual assets.
+- Do not commit API credentials, real contacts, internal budget or company terms, contracts, output proposals, uploaded source PPTX/PDF, or restricted visual assets to this public repo. See `docs/PRIVACY_AND_DATA_HANDLING.md`. Every issue and PR is public too.
 - Public documentation in English, concise, technical and supervisor-readable. Avoid generic promotional claims.
 
 ## Implementation discipline

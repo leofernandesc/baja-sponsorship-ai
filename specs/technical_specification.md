@@ -13,7 +13,7 @@ Generate a company-specific, sourced, commercially valid BAJA UEA sponsorship Po
 - **FR-003:** Search publicly available information, capturing sources and dates.
 - **FR-004:** Use a versioned and reviewed BAJA UEA knowledge base.
 - **FR-005:** Distinguish verified facts, analytic inferences, custom offers and unknowns.
-- **FR-006:** Recommend sponsorship via an approved **hybrid** approach (official tiers and tailored financial/in-kind/technical/institutional cooperation).
+- **FR-006:** Recommend sponsorship via an approved **hybrid** approach with `money`, `materials`, and `services` as contribution types, and `official_tier`, `custom`, and `mixed` as commercial arrangements.
 - **FR-007:** Block unapproved prices, tiers, brand promises, legal claims and special benefits.
 - **FR-008:** Produce an internal prospecting report with evidence citations and strategic assessment.
 - **FR-009:** Draft a company-specific proposal using the existing BAJA UEA PowerPoint as the immutable base; add editable company-specific slides.
@@ -42,11 +42,11 @@ Generate a company-specific, sourced, commercially valid BAJA UEA sponsorship Po
 
 ## 5. Commercial policy
 
-See `specs/sponsorship_policy.md`. Official tiers must be verified and gap-free before use. Customized proposals may suggest forms of cooperation but never bind the team without approval.
+See `specs/sponsorship_policy.md` and `docs/E1_DECISIONS.md`. 2026/2027 is the proposal cycle; 2025/2026 results are historical but approved. Operational management approves data, custom terms and final proposals. AI can propose money amounts, but not bind the team. Original annual budget is excluded from calculations/claims. Benefits are limited to the existing plans, except for separately approved changes. The public repository may not contain sensitive data.
 
 ## 6. PPTX extension
 
-See `docs/POWERPOINT_EXTENSION.md`. The source PPTX is pending. Slide count, insertion locations, template manifest and compatibility matrix are OPEN until inspection.
+See `docs/POWERPOINT_EXTENSION.md`. The source PPTX has been inspected: the 2026 sponsorship source has 15 slides, with a company-specific commercial example on slide 13. Source fidelity/embedded table and final insertion mapping remain technical E4 gates. See `docs/E0_PPTX_AUDIT.md`.
 
 ## 7. Milestones
 
@@ -54,12 +54,11 @@ See `docs/DEVELOPMENT_PLAN.md` (E0–E7). MVP accepted at E6; React/FastAPI migr
 
 ## 8. OPEN decisions
 
-- Original editable PPTX source + technical inventory.
 - Exact number/sequence of appended slides and variable fields.
-- Final current sponsorship tiers, values, cumulative benefits and approval owners.
-- Current technical priorities and legitimate in-kind needs.
+- Financial tier boundary normalization and benefit transcription/validation (approver role is operational management).
+- Current technical priorities and legitimate materials/services needs, after provisional extraction from source PPTX.
 - Publication rights for original deck and third-party logos.
-- Repository visibility and license.
+- License and protected private dataset deployment (public repository confirmed; no sensitive data allowed).
 - MVP deployment target and number of internal users (not needed for E0).
 
 ## 9. Change control
