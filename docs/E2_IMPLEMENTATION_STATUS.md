@@ -10,16 +10,16 @@
 - Synthetic JSON fixture and offline fixture provider.
 - OpenAI Responses web-search adapter with tool URL allowlist, structured extraction and a review-required claim state.
 - Local CLI that stores results privately under outputs/research.
-- 20 deterministic local pytest cases with synthetic content and mocked API responses.
+- 20 original deterministic pytest cases with synthetic/mocked API data plus four recorded-public-source Bosch/SAE replay tests.
 
 ## Local test evidence
 
 On 2026-11-03, Python 3.13 / Pydantic 2.13.5:
 
     python -m pytest -q /mnt/data/e2_research_work/tests -c /mnt/data/e2_research_work/pyproject.toml
-    20 passed in 0.06s
+    24 passed in 0.06s
 
-This was a local test of equivalent files before upload. This is NOT a GitHub Actions result, and does NOT validate real Responses API source objects or factual truth.
+The four additional tests replay manually checked public-source URLs using a mocked Responses envelope; the local replay makes no network requests. A separate, actual web audit is documented in `docs/E2_REAL_RESEARCH_VALIDATION.md`. The **GitHub Actions PR workflow completed successfully** for commit `10dd4a2c` (status checked on 2026-11-03). This still does NOT validate a real authenticated Responses API request or automatic semantic truth checks.
 
 ## Setup
 
@@ -42,7 +42,7 @@ Keep API keys outside Git, and do not place real prospect dossiers in a public r
 1. Validate behavior and source objects against current authenticated Responses API.
 2. Verify content of cited pages independently; URL traceability is not content verification.
 3. Add bounded retries, rate limits, call/token/cost budgets and safe error handling.
-4. Add tests with real public company examples and negative/ambiguous cases.
+4. Extend real public-company examples beyond Bosch into electronics/logistics/materials/retail; ambiguity/negative tests currently use mocks.
 5. Define private retention/access policy for research histories.
 6. Review source age, contradictory claims and regional business-unit correctness.
 
