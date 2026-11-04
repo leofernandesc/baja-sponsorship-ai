@@ -1,6 +1,6 @@
 # E2 — Implementation and test evidence
 
-**Status:** foundation committed on a feature branch; authenticated web research has NOT been run and E2 is NOT fully complete.
+**Status (2026-11-03):** research and independent semantic-verification foundation committed. **43 offline tests + GitHub Actions pass.** Authenticated Responses API research has **NOT** been run (no API key/model configured here); E2 remains open.
 
 ## Implemented
 
@@ -19,7 +19,7 @@ On 2026-11-03, Python 3.13 / Pydantic 2.13.5:
     python -m pytest -q /mnt/data/e2_research_work/tests -c /mnt/data/e2_research_work/pyproject.toml
     24 passed in 0.06s
 
-The four additional tests replay manually checked public-source URLs using a mocked Responses envelope; the local replay makes no network requests. A separate, actual web audit is documented in `docs/E2_REAL_RESEARCH_VALIDATION.md`. The **GitHub Actions PR workflow completed successfully** for commit `10dd4a2c` (status checked on 2026-11-03). This still does NOT validate a real authenticated Responses API request or automatic semantic truth checks.
+The suite uses mocked Responses calls and HTML/public-source snippet fixtures; it makes no authenticated API calls or external network requests. The GitHub Actions PR workflow completed successfully at the current implementation commit. Literal-source quote checks and mocked semantic verdicts are exercised, but live judge accuracy is **not established**. See `docs/E2_SEMANTIC_VALIDATION.md`.
 
 ## Setup
 
@@ -39,11 +39,15 @@ Keep API keys outside Git, and do not place real prospect dossiers in a public r
 
 ## Remaining before E2 release
 
-1. Validate behavior and source objects against current authenticated Responses API.
-2. Verify content of cited pages independently; URL traceability is not content verification.
+1. Run authenticated Responses API smoke test using a private API key and supported model; no credentials are available in the execution environment.
+2. Implemented conservative independent content fetch, LLM judge and quote-anchor validation; **still needs authenticated live verification and evaluation of semantic correctness**.
 3. Add bounded retries, rate limits, call/token/cost budgets and safe error handling.
 4. Extend real public-company examples beyond Bosch into electronics/logistics/materials/retail; ambiguity/negative tests currently use mocks.
 5. Define private retention/access policy for research histories.
 6. Review source age, contradictory claims and regional business-unit correctness.
 
 See also docs/E2_RESEARCH_DESIGN.md.
+
+## E2 semantic verification upgrade (2026-11-03)
+
+Run: `python -m pytest -q` → **43 passed**. Run without configured private credentials: `python -m baja_sponsorship.research.live_validation Bosch` → blocked with exit code 2 **before contacting API**. See `docs/E2_SEMANTIC_VALIDATION.md` for a controlled real test command. No confidential data committed. Production egress/SSRF network controls and spending controls remain pending.
