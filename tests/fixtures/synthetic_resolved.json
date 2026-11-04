@@ -1,0 +1,35 @@
+{
+  "schema_version": "e2.v0.1",
+  "researched_at": "2026-11-03T12:00:00-04:00",
+  "identity": {
+    "input_name": "Example Engineering",
+    "status": "resolved",
+    "canonical_name": "Example Engineering Ltda (fictional)",
+    "official_website": "https://example.org",
+    "identity_source_ids": ["s1"],
+    "candidates": []
+  },
+  "sources": [
+    {
+      "source_id": "s1",
+      "url": "https://example.org/about",
+      "title": "Synthetic company profile (non-real placeholder)",
+      "source_type": "company_official",
+      "retrieved_at": "2026-11-03T12:00:00-04:00",
+      "published_at": null,
+      "origin": "synthetic_test"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "c1",
+      "text": "In this synthetic scenario, the fictional company makes sensor modules.",
+      "claim_type": "fact",
+      "evidence_source_ids": ["s1"],
+      "review_status": "source_linked",
+      "reviewer_role": null
+    }
+  ],
+  "unknowns": ["This is a synthetic fixture and is not evidence about a real company."],
+  "limitations": ["The link is illustrative and does not support the simulated claim."]
+}
